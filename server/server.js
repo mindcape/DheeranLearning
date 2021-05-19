@@ -21,13 +21,19 @@ const server = http.createServer((req, res) => {
             writeToFile(req);
             break
         default:
-            res.writeHead(404);
-            res.end(JSON.stringify({ error: "Resource not found" }));
+            res.writeHead(200);
+            writeToFile(req)
+            res.end(JSON.stringify({ error: "Form Submitted" }));
     }
 });
 
 
 function writeToFile(req) {
+
+    req.on('data', chunk => {
+        console.log('A chunk of data has arrived: ', chunk);
+    });
+
     var data = "New File Contents";
 
     fs.writeFile("temp.txt", data, (err) => {
