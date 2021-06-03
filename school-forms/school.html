@@ -6,18 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regstration from</title>
     <style>
-        body{
-            font-family:cursive;
+        body {
+            font-family: cursive;
             color: #496BEE;
         }
-
-        .field {
-            padding: 10px;
-            text-align: center;
-        }
-        .lookgood{
+        
+        .lookgood {
             background-color: bisque;
-
+        }
+        
+        tr {
+            padding-top: 30px;
+        }
+        
+        td {
+            width: 200px;
         }
     </style>
 </head>
@@ -29,55 +32,65 @@
     <!-- name -->
     <form action="">
         <fieldset>
-            <div class="field lookgood">
-                <label for="firstn">First Name</label>
-                <input type="text" id="firstn" name="firstname" placeholder="First Name type here">
-            </div>
-            <div class="field lookgood">
-                <label for="lastn">Last Name</label>
-                <input type="text" id="lastn" name="lastname" placeholder="Last Name type here">
-            </div>
-            <!-- name end -->
-            <!-- school  -->
-        </fieldset> 
-        <div class="field">
-            <label for="schoolsect">Select your school</label>
-            <select name="schoolselect" id="schoolsect"> 
-                <option value="-1"> </option>
-                <option value="1">Short Pump Middle School</option>
-                <option value="2">Pocahontas Middel School</option>
-                <option value="3">Quioccasin Middle School</option> 
-                <option value="4">Brookland Middle School</option>
-                <option value="5">Elko Middle School</option>
-                <option value="6">Fairfield Middle School</option>
-                <option value="7">Holman Middle School</option>
-                <option value="8">Hungary Creek Middle School</option>
-                <option value="9">George H. Moody Middle School</option>
-                <option value="10">John Rolfe Middle School</option>
-                <option value="11">Tuckahoe Middle School</option>
-                <option value="12">L. Douglas Wilder Middle School</option>
-            </select>
-     </div>
-        <!-- school end -->
-        <!-- gender begain -->
-        <div class="field">
-        <h4>Gender</h4>
-        <input type="radio" id="gender1male" name="gender" value="malename" >
-        <label for="gander1male">male</label> <br>
-        <input type="radio" id="gander2female" name="gender" value="femalename">
-        <label for="gander2female">female</label>
-    </div>
-    <!-- gander end -->
-    <!-- allergies begain -->
-    <div class="field">
-        <h4>allergies</h4>
-        <p>type your child's allergies in the box below if not pick the "no allergies" button</p>
-        <textarea name="allergies" rows="20" cols="20" id="allergiestextbox">
-        </textarea> <br>
-        <label for="allergiesonly1">do not have allergies</label> 
-        <input type="radio" id="allergiesonly1" name="noallergies" value="noallergieshave">
-    </div>
-    <!-- allergies end  -->
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label for="firstn">First Name</label></td>
+                        <td><input type="text" id="firstn" name="firstname" placeholder="First Name type here"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lastn">Last Name</label></td>
+                        <td><input type="text" id="lastn" name="lastname" placeholder="Last Name type here"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="schoolsect">Select your school</label></td>
+                        <td>
+                            <div class="field">
+
+                                <select name="schoolselect" id="schoolsect"> 
+                                    <option value="-1"> </option>
+                                    <option value="1">Short Pump Middle School</option>
+                                    <option value="2">Pocahontas Middel School</option>
+                                    <option value="3">Quioccasin Middle School</option> 
+                                    <option value="4">Brookland Middle School</option>
+                                    <option value="5">Elko Middle School</option>
+                                    <option value="6">Fairfield Middle School</option>
+                                    <option value="7">Holman Middle School</option>
+                                    <option value="8">Hungary Creek Middle School</option>
+                                    <option value="9">George H. Moody Middle School</option>
+                                    <option value="10">John Rolfe Middle School</option>
+                                    <option value="11">Tuckahoe Middle School</option>
+                                    <option value="12">L. Douglas Wilder Middle School</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Gender
+                        </td>
+                        <td>
+
+                            <input type="radio" id="gender1male" name="gender" value="malename">
+                            <label for="gander1male">male</label>
+                            <input type="radio" id="gander2female" name="gender" value="femalename">
+                            <label for="gander2female">female</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            allergies
+                        </td>
+                        <td>
+                            <textarea name="allergies" rows="20" cols="20" id="allergiestextbox"></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
     </form>
 </body>
 
