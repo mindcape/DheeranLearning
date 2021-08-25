@@ -40,3 +40,4 @@ console.log(multiply(subtract(add(3,4),5),3));
 //boolean - true/false
 //number  - 1, 2 /34.00/2.2
 //array - can write any array of things in this boxy bracts [] 
+
