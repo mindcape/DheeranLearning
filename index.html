@@ -4,20 +4,66 @@
 <head>
     <link rel="icon" href="dog pic">
     <title>Ace</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: teal;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* or "cover" for a different fit */
+        }
+        .container {
+             position: relative;
+            display: inline-block;
+        }
+
+    .overlay-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+    }
+
+
+    .overlay-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+    .overlay-button
+    {
+        padding: 20px 70px;
+        border-radius: 20px;
+        background-color: #1ABC9C;
+        position: relative;
+            top: 450px; 
+    }
+    </style>
 </head>
 
 <body>
-    <h1> hi guys </h1>
-    <p style="background-color:peachpuff;"> I have created this web site for my dog Ace. <br> There are going to be links so please click them all.
-        <mark>Thank you.</mark>
-        <!-- <i>Thank you.</i>  
-        <em>Thank you.</em>  
-        <del>Thank you.</del>  <ins>Thank you.</ins>  <strong>Thank you.</strong>   -->
-    </p>
-    <hr>
-    <p style="text-align: center;">click this link to get to the web site </p>
-    <p style="text-align: center;"><a href="prank starter.html">this is the link</a> </p>
-
+    <body>
+        <div class="container">
+            <img src="sdg_logo.png" alt="Description of the image">
+            <a href="sdg_main.html" class="overlay-link">
+                 <button class="overlay-button">Click Me</button>
+            </a>
+        </div>
 </body>
 
 </html>

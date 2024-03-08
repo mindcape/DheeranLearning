@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .image-container {
+        position: relative;
+        width: 200px; /* Adjust as needed */
+      }
+      
+      .image-text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        color: white;
+        padding: 10px;
+        text-align: center;
+        transition: opacity 0.3s ease; /* Add transition for smooth effect */
+        opacity: 0; /* Initially hidden */
+      }
+      
+      .image-container:hover .image-text {
+        opacity: 1; /* Show text on hover */
+      }
+    </style>
+
+
+</head>
+
+<body>
+    <p>
+        <div class="image-container">
+            <img src="C:\Users\Dheeran Reddy\OneDrive\Pictures\Screenshots\Screenshot 2024-02-09 063459.png" alt="Image Description">
+            <div class="image-text">Original Text</div>
+          </div>
+
+    </p>
+
+</body>
+
+
+</html>
