@@ -1,43 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-    .image-container {
-        position: relative;
-        width: 200px; /* Adjust as needed */
-      }
-      
-      .image-text {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-        color: white;
-        padding: 10px;
-        text-align: center;
-        transition: opacity 0.3s ease; /* Add transition for smooth effect */
-        opacity: 0; /* Initially hidden */
-      }
-      
-      .image-container:hover .image-text {
-        opacity: 1; /* Show text on hover */
-      }
-    </style>
-
-
+  <style>
+    .container {
+        display: grid;
+        grid-template-columns: 50px 1fr 200px 50px;
+        grid-template-rows: repeat(50, 50px);
+    }
+    
+    .content {
+        background-color: gray;
+    }
+    
+    .box1 {
+        grid-column: 2/3;
+        grid-row: 7 / 12;
+    }
+    
+    .fullrow {
+        grid-column: 2 / 5;
+    }
+    
+    .banner {
+        grid-row: 1/2;
+        height: 48px;
+        
+    }
+    .banner2{
+        grid-row: 2/3;
+        height: 48px  ;
+    }
+    .banner3{
+      grid: 4/3;
+      height: 48px;
+    }
+    .notifications {
+        background-color: red;
+        /** row 4 **/
+    }
+    
+    .menu {
+        background-color: teal;
+        /** row 5 **/
+    }
+    
+    .footer {
+        background-color: goldenrod;
+        grid-row: 12/15;
+    }
+  </style>
 </head>
 
 <body>
-    <p>
-        <div class="image-container">
-            <img src="C:\Users\Dheeran Reddy\OneDrive\Pictures\Screenshots\Screenshot 2024-02-09 063459.png" alt="Image Description">
-            <div class="image-text">Original Text</div>
-          </div>
+<div> 
+    <div class="container menu">
+      <img src="C:\Users\Dheeran Reddy\Downloads\sdg_1.png" alt="Sdg 1 no poverty" class="banner">
+      <img src="C:\Users\Dheeran Reddy\OneDrive\HTML\SDG_2.png" alt="SDG 2 zero hunger" class="banner2">
 
-    </p>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
 
 </body>
 
 
 </html>
+
+
+
+
