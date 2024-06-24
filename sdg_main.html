@@ -1,81 +1,149 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>The SDG goals</title>
   <style>
-    .container {
-        display: grid;
-        grid-template-columns: 50px 1fr 200px 50px;
-        grid-template-rows: repeat(50, 50px);
+    body {
+      font-family: Arial, sans-serif;
+      display: grid;
+      grid-template-columns: 200px auto;
     }
-    
-    .content {
-        background-color: gray;
+
+    .left-nav {
+      background-color: #f1f1f1;
+      padding: 10px;
     }
-    
-    .box1 {
-        grid-column: 2/3;
-        grid-row: 7 / 12;
+
+    .left-nav img {
+        width: 100%;
+        height: 100%;
     }
-    
-    .fullrow {
-        grid-column: 2 / 5;
+
+    .left-nav ul {
+      list-style-type: none;
+      padding: 0;
     }
-    
-    .banner {
-        grid-row: 1/2;
-        height: 48px;
-        
+
+    .left-nav li {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
     }
-    .banner2{
-        grid-row: 2/3;
-        height: 48px  ;
+
+    .left-nav li:hover {
+      background-color: #ddd;
     }
-    .banner3{
-      grid: 4/3;
-      height: 48px;
+
+    .left-nav li a {
+      text-decoration: none;
+      color: #000;
     }
-    .notifications {
-        background-color: red;
-        /** row 4 **/
+
+    .content-area {
+      padding: 10px;
     }
-    
-    .menu {
-        background-color: teal;
-        /** row 5 **/
+
+    .content-area h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
     }
-    
-    .footer {
-        background-color: goldenrod;
-        grid-row: 12/15;
+
+    .content-area p {
+      font-size: 16px;
     }
+
+    .content-area img {
+      max-width: 100%;
+    }
+
+    #a-content, #b-content, #c-content, #d-content, #e-content{
+        display: none;
+        size: 47px;
+      }
   </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var navMenu = document.querySelector('.left-nav ul');
+    
+        navMenu.addEventListener('click', function(event) {
+            event.preventDefault();
+            var targetLink = event.target.closest('a');
+
+            if (!targetLink || !navMenu.contains(targetLink)) {
+                return;
+            } 
+            var target = event.target.getAttribute('id')
+            var contentArea = document.getElementById(target + '-content');
+    
+            if (!contentArea) {
+                return;
+            }
+    
+            var allContentAreas = document.querySelectorAll('.content-area div');
+    
+            allContentAreas.forEach(function(area) {
+                area.style.display = 'none';
+            });
+    
+            contentArea.style.display = 'block';
+        });
+    });
+    
+
+       
+          
+    </script>
+
 </head>
-
 <body>
-<div> 
-    <div class="container menu">
-      <img src="C:\Users\Dheeran Reddy\Downloads\sdg_1.png" alt="Sdg 1 no poverty" class="banner">
-      <img src="C:\Users\Dheeran Reddy\OneDrive\HTML\SDG_2.png" alt="SDG 2 zero hunger" class="banner2">
+  <div class="left-nav">
+    <ul>
+      <li><a href="#"><img src="C:\Users\Dheeran Reddy\OneDrive\HTML\SDG_1.png" alt="SDG 1" id="a"></a></li>
+      <li><a href="#"><img src="C:\Users\Dheeran Reddy\OneDrive\HTML\SDG_2.png" alt="SDG 2" id="b"></a></li>
+      <li><a href="#"><img src="C:\Users\Dheeran Reddy\OneDrive\HTML\SDG_3.png" alt="SDG 3" id="c"></a></li>
+      <li><a href="#"><img src="C:\Users\Dheeran Reddy\OneDrive\HTML\SDG_4.png" alt="SDG 4" id="d"></a></li>
+      <li><a href="#"><img src="C:\Users\Dheeran Reddy\OneDrive\HTML\img_girl.jpg.jpg" alt="SDG 5" id="e"></a></li>
+    </ul>
+  </div>
 
+  <div class="content-area">
+    
+    <h1>Welcome </h1>
 
+    <p>The SDG goals, are very important for our understanding of the modern world, this website is made to help you understand everything about the SDGs and how you can help</p>
 
+    <p>click on the SDGs you want to learn about, and how you can help. </p>
+
+    <div id="a-content">
+      <h2>SDG one - No Poverty</h2>
+      <p>SDG 1 aims to eradicate poverty globally by addressing its multidimensional aspects,
+         including income inequality, social exclusion, and lack of access to basic services, 
+         to ensure that all people can lead a life of dignity and opportunity.</p>
     </div>
 
+    <div id="b-content">
+      <h2>SDG two - Zero Hunger</h2>
+      <p>SDG 2 focuses on ending hunger, achieving food security, improving nutrition, and promoting 
+         sustainable agriculture by supporting small-scale farmers,
+        investing in agricultural research and infrastructure, and ensuring equitable access to food for all.</p>
+    </div>
 
+    <div id="c-content">
+      <h2>SDG three - Good Health and Well-Being</h2>
+      <p>recipes.</p>
+    </div>
 
+    <div id="d-content">
+      <h2>SDG four - Quailty Education</h2>
+      <p>juiced.</p>
+    </div>
 
+  </div id="e-content">
+      <h2>SDG five - Gender Equality</h2>
+      <p>fruit</p>
 
-
-
-
-
-
-
-</div>
-
+  </div>
 </body>
-
-
 </html>
 
 
