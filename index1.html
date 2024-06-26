@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Side Nav Example</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for the side nav */
+        .sidenav {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            padding-top: 20px;
+        }
+
+        .sidenav a {
+            padding: 8px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 260px; /* Same as the width of the sidenav */
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Side Navigation -->
+    <div class="sidenav">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#clients">Clients</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <!-- Page Content -->   
+    <div class="main" >
+        <h2>Sidebar Navigation Example</h2>
+        <p>This example shows how to create a side navigation menu.</p>
+        <p>The side navigation menu will always be shown on the left side of the page, and the content will be pushed to the right.</p>
+    </div>
+
+    <div class="main" id="services">
+        <p>
+            This is the services tab we are located as the nother west area.
+        </p>
+
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
