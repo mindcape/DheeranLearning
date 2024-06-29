@@ -5,60 +5,7 @@
         <title>Ace</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <style>
-            body, html {
-                margin: 0;
-                padding: 0;
-                height: 100%;
-                background-color: teal;
-            }
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain; /* or "cover" for a different fit */
-            }
-            h1{
-                position: relative;
-                display: inline-block;
-            }
-
-            .left-nav ul {
-                 list-style-type: none;
-                 padding: 0;
-            }
-
-
-        </style>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-            var navMenu = document.querySelector('.left-nav ul');
-        
-            navMenu.addEventListener('click', function(event) {
-                event.preventDefault();
-                var targetLink = event.target.closest('a');
-    
-                if (!targetLink || !navMenu.contains(targetLink)) {
-                    return;
-                } 
-                var target = event.target.getAttribute('id')
-                var contentArea = document.getElementById(target + '-content');
-        
-                if (!contentArea) {
-                    return;
-                }
-        
-                var allContentAreas = document.querySelectorAll('.content-area div');
-        
-                allContentAreas.forEach(function(area) {
-                    area.style.display = 'none';
-                });
-        
-                contentArea.style.display = 'block';
-            });
-        });      
-        </script>
-    
+        <link rel="stylesheet" href="subject-docs/sidenav_style.css">
     </head>
 
 
@@ -72,28 +19,18 @@
     </p>
 
     <p>
-        <h5>links for the respective docuements (9th grade)</h5>
-            <div id="a-content">
+        <div class="dropdown">
+            <button class="dropbtn">9th grade subjects</button>
+            <div class="dropdown-content">
                 <a href="subject-docs/9th_chem.html">chemistry</a>
-            </div>
-
-            <div id="b-content">
                 <a href="subject-docs/9th_bio.html">biology</a>
-            </div>
-
-            <div id="c-content">
                 <a href="subject-docs/9th_physics.html">physics</a>
-            </div>
-
-            <div id="d-content">
                 <a href="subject-docs/9th_geography.html">geography</a>
-            </div>
-
-            <div id="e-content">
                 <a href="subject-docs/9th_history.html">history</a>
-            </div>
-
-    
+            </a>
+        </ul>
+    </div>
+</div>
     
 
 </body>
