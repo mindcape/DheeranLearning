@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskbar Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .taskbar {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            border: 1px solid #86bafe;
+            border-radius: 8px;
+            width: fit-content;
+        }
+
+        .taskbar-item {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        .taskbar-item:last-child {
+            margin-right: 0;
+        }
+
+        .taskbar-item span {
+            margin-left: 5px;
+        }
+
+        .taskbar-item svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .more-options {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .view-toggle {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .view-toggle svg {
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="taskbar">
+        <button class="taskbar-item ">
+            <!-- get pictures  -->
+            <img src="pictures/spaceship_best.png" alt="Best" style="width: 20px; height: 20px;">
+            <span>Best</span>
+        </button>
+
+        <button class="taskbar-item">
+            <img src="pictures/hot_fire.png" alt="Hot" style="width: 20px; height: 20px;">            
+            <span>Hot</span>
+        </button>
+        <button class="taskbar-item">
+            <img src="pictures/star_new.png" alt="New" style="width: 20px; height: 20px;">
+            <span>New</span>
+        </button>
+        <button class="taskbar-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12c0 4.418-3.582 8-8 8s-8-3.582-8-8 3.582-8 8-8 8 3.582 8 8z"/></svg>
+            <span>Top</span>
+        </button>
+        <div class="more-options">...</div>
+        <button class="view-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h18m-6 6h6M3 18h6"/></svg>
+        </button>
+    </div>
+
+    <main>
+
+        <hr> 
+        <p>
+
+            hello bro this is to test the hr tag. 
+        </p>
+    </main>
+</body>
+</html>
