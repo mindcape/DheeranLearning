@@ -72,3 +72,16 @@ color: #f1f1f1;
 margin-left: 260px; /* Same as the width of the sidenav */
 padding: 16px;
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
