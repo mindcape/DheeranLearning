@@ -217,7 +217,8 @@ section h2::after {
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
-  margin: 30px 0;
+  margin: 30px auto;
+  max-width: 900px;
 }
 
 .study-content {
@@ -289,6 +290,7 @@ section h2::after {
 
   .study-layout {
     grid-template-columns: 1fr;
+    max-width: 100%;
   }
 
   .study-sidebar {
@@ -305,5 +307,32 @@ section h2::after {
 
   .subject-iframe {
     height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .study-layout {
+    max-width: 95%;
+    margin: 30px auto;
+  }
+
+  .study-content {
+    padding: 15px;
+  }
+
+  .subject-iframe {
+    height: 300px;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content h2 {
+    font-size: 18px;
+  }
+
+  section h2 {
+    font-size: 22px;
   }
 }
