@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contributors - Study Resources</title>
+        <link rel="stylesheet" href="assets/css/common.css">
+        <link rel="stylesheet" href="assets/css/navigation.css">
+        <link rel="stylesheet" href="assets/css/components.css">
+        <link rel="stylesheet" href="assets/css/theme.css">
+        <style>
+            .contributor-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 30px;
+                margin: 40px 0;
+            }
+
+            .contributor-card {
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                padding: 30px;
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .contributor-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            }
+
+            .contributor-image {
+                display: block;
+                width: 120px;
+                height: 120px;
+                border-radius: 8px;
+                object-fit: cover;
+                margin: 0 auto 20px;
+                border: 4px solid #fff;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+
+            .contributor-avatar {
+                width: 100px;
+                height: 100px;
+                border-radius: 8px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                margin: 0 auto 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 40px;
+                color: white;
+                font-weight: bold;
+            }
+
+            .contributor-name {
+                font-size: 22px;
+                font-weight: bold;
+                color: #2c3e50;
+                margin-bottom: 10px;
+            }
+
+            .contributor-role {
+                color: #3498db;
+                font-size: 16px;
+                margin-bottom: 15px;
+                font-weight: 500;
+            }
+
+            .contributor-bio {
+                color: #666;
+                font-size: 14px;
+                line-height: 1.6;
+                margin-bottom: 20px;
+            }
+
+            .contributor-links {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .contributor-links a {
+                display: inline-block;
+                padding: 8px 16px;
+                background-color: #ecf0f1;
+                color: #2c3e50;
+                border-radius: 4px;
+                font-size: 14px;
+                transition: background-color 0.3s ease;
+            }
+
+            .contributor-links a:hover {
+                background-color: #3498db;
+                color: white;
+            }
+
+            .contribution-section {
+                margin-bottom: 50px;
+            }
+
+            .contribution-section h3 {
+                font-size: 24px;
+                color: #2c3e50;
+                margin-bottom: 20px;
+                padding-bottom: 15px;
+                border-bottom: 3px solid #3498db;
+            }
+
+            .contribution-list {
+                list-style: none;
+                padding: 0;
+            }
+
+            .contribution-list li {
+                padding: 12px 0;
+                border-bottom: 1px solid #ecf0f1;
+                color: #555;
+            }
+
+            .contribution-list li:last-child {
+                border-bottom: none;
+            }
+
+            .contribution-list li:before {
+                content: "✓ ";
+                color: #27ae60;
+                font-weight: bold;
+                margin-right: 10px;
+            }
+
+            .how-to-contribute {
+                background-color: #ecf0f1;
+                padding: 30px;
+                border-radius: 8px;
+                margin: 40px 0;
+            }
+
+            .how-to-contribute h3 {
+                color: #2c3e50;
+                margin-bottom: 20px;
+            }
+
+            .how-to-contribute ol {
+                margin-left: 20px;
+                color: #555;
+                line-height: 1.8;
+            }
+
+            .how-to-contribute ol li {
+                margin-bottom: 15px;
+            }
+
+            .subject-menu {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+                margin: 30px 0;
+            }
+
+            .subject-menu a {
+                display: block;
+                padding: 15px 20px;
+                background-color: #3498db;
+                color: white;
+                text-align: center;
+                border-radius: 6px;
+                font-weight: 500;
+                text-decoration: none;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+
+            .subject-menu a:hover {
+                background-color: #2980b9;
+                transform: translateY(-2px);
+            }
+
+            .org-info {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 40px;
+                border-radius: 8px;
+                margin: 30px 0;
+            }
+
+            .org-info h3 {
+                color: white;
+                margin-bottom: 15px;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+                padding-bottom: 10px;
+            }
+
+            .org-info p {
+                line-height: 1.8;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header style="background-color: #1a1a1a; padding: 25px 0; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); margin-top: 0;">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h1 style="color: white; margin: 0; font-size: 32px; font-weight: bold;">Contributors</h1>
+                    <p style="color: #bbb; margin: 8px 0 0 0; font-size: 14px;">Meet the people behind Study Resources</p>
+                </div>
+                <a href="index.html" style="color: white; text-decoration: none; font-size: 16px; background-color: #333; padding: 10px 20px; border-radius: 5px;">Home</a>
+            </div>
+        </header>
+
+        <main style="margin-top: 80px;">
+            <!-- Introduction Section -->
+            <section style="padding: 60px 20px; background-color: #f9f9f9;">
+                <div class="container">
+                    <h2 style="text-align: center; font-size: 36px; margin-bottom: 30px; color: #333;">Thank You to Our Contributors</h2>
+                    <div style="max-width: 900px; margin: 0 auto;">
+                        <div style="text-align: center; color: #666; font-size: 16px; line-height: 1.8; margin-bottom: 40px;">
+                            <p>
+                                The Study Resources platform is a collaborative effort. These dedicated individuals have contributed 
+                                their time, expertise, and resources to make quality educational materials accessible to students worldwide.
+                            </p>
+                        </div>
+                        
+                        <div class="org-info">
+                            <h3>About dheeran.net</h3>
+                            <p>
+                                <strong>dheeran.net</strong> is a non-profit organization dedicated to helping students navigate their school subjects 
+                                with engaging, interactive, and practically-oriented learning materials. We believe that education should be accessible to everyone, 
+                                and that real-world applications make learning more meaningful and memorable.
+                            </p>
+                            <p style="margin-top: 15px;">
+                                Our mission is to bridge the gap between classroom learning and practical understanding by providing comprehensive study resources 
+                                that include theory, real-world examples, and hands-on applications for students of all grade levels.
+                            </p>
+                        </div>
+
+                        <div style="text-align: center; background-color: white; padding: 20px; border-radius: 6px;">
+                            <h3 style="color: #2c3e50; margin-bottom: 20px;">Explore Our Subjects</h3>
+                            <div class="subject-menu">
+                                <a href="learning/subject-docs/9th-grade/biology/9th_bio.html">Biology</a>
+                                <a href="learning/subject-docs/9th-grade/chemistry/9th_chem.html">Chemistry</a>
+                                <a href="learning/subject-docs/9th-grade/physics/9th_physics.html">Physics</a>
+                                <a href="learning/subject-docs/9th-grade/history/9th_history.html">History</a>
+                                <a href="learning/subject-docs/9th-grade/english/9th_english.html">English</a>
+                                <a href="learning/subject-docs/9th-grade/geography/9th_geography.html">Geography</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contributors Grid -->
+            <section style="padding: 60px 20px; background-color: white;">
+                <div class="container">
+                    <h2 style="text-align: center; font-size: 28px; margin-bottom: 50px; color: #333;">Our Team</h2>
+                    <div class="contributor-grid">
+                        <div class="contributor-card">
+                            <!-- prefers a real photo if available at assets/images/dheeran.jpg, otherwise shows initials -->
+                            <picture>
+                                <img src="assets/images/dheeran_orig.jpg" alt="Dheeran Reddy Seelam" class="contributor-image" onerror="this.style.display='none'; document.getElementById('dheeranInitials').style.display='flex'">
+                            </picture>
+                            <div id="dheeranInitials" class="contributor-avatar" style="display:none;">DR</div>
+                            <div class="contributor-name">Dheeran Reddy Seelam</div>
+                            <div class="contributor-role">Founder & Project Lead</div>
+                            <div class="contributor-bio">
+                                Initiated the project to make educational resources more accessible and engaging for students.
+                            </div>
+                            <div class="contributor-links">
+                                <a href="mailto:nagadheeran.reddy@gmail.com">Contact</a>
+                                <a href="#">Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contributions Section -->
+            <section style="padding: 60px 20px; background-color: #f9f9f9;">
+                <div class="container" style="max-width: 900px;">
+                    <h2 style="text-align: center; font-size: 28px; margin-bottom: 50px; color: #333;">Contribution Areas</h2>
+                    
+                    <div class="contribution-section">
+                        <h3>Subject Matter Expertise</h3>
+                        <ul class="contribution-list">
+                            <li>9th Grade Biology - Cell structure, genetics, and organisms</li>
+                            <li>9th Grade Chemistry - Chemical reactions and laboratory techniques</li>
+                            <li>9th Grade Physics - Motion, energy, and forces</li>
+                            <li>9th Grade History - Historical events and civilizations</li>
+                            <li>9th Grade English - Literature and writing skills</li>
+                            <li>9th Grade Geography - Earth systems and climate</li>
+                        </ul>
+                    </div>
+
+                    <div class="contribution-section">
+                        <h3>Technical Development</h3>
+                        <ul class="contribution-list">
+                            <li>Website design and user interface</li>
+                            <li>Frontend development and responsive design</li>
+                            <li>Content management and organization</li>
+                            <li>Performance optimization</li>
+                        </ul>
+                    </div>
+
+                    <div class="contribution-section">
+                        <h3>Content Curation</h3>
+                        <ul class="contribution-list">
+                            <li>Research and compilation of study materials</li>
+                            <li>Quality assurance and fact-checking</li>
+                            <li>Educational best practices implementation</li>
+                            <li>Accessibility and usability improvements</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How to Contribute Section -->
+            <section style="padding: 60px 20px; background-color: white;">
+                <div class="container" style="max-width: 900px;">
+                    <h2 style="text-align: center; font-size: 28px; margin-bottom: 50px; color: #333;">Want to Contribute?</h2>
+                    
+                    <div style="background-color: #d5f4e6; border-left: 5px solid #27ae60; padding: 20px; border-radius: 4px; margin-bottom: 40px;">
+                        <p style="color: #27ae60; font-weight: bold; margin: 0;">
+                            ✓ <strong>Volunteer Hours Available:</strong> Contributors who submit reading materials and educational content will receive volunteer hours certification for their contributions!
+                        </p>
+                    </div>
+                    
+                    <div class="how-to-contribute">
+                        <h3>Ways You Can Help</h3>
+                        <ol>
+                            <li><strong>Submit Content:</strong> Do you have educational materials or resources you'd like to share? 
+                                Send them to us with proper attribution.</li>
+                            <li><strong>Report Errors:</strong> Found a mistake or outdated information? Email us with details at 
+                                <strong>nagadheeran.reddy@gmail.com</strong></li>
+                            <li><strong>Suggest Improvements:</strong> Have ideas for better organization, design, or features? 
+                                We'd love to hear your suggestions.</li>
+                            <li><strong>Code Contribution:</strong> If you're a developer, you can contribute to improving the 
+                                website's functionality and design.</li>
+                            <li><strong>Spread the Word:</strong> Help us reach more students by sharing Study Resources with 
+                                your network.</li>
+                        </ol>
+                    </div>
+
+                    <div style="margin-top: 40px; padding: 30px; background-color: #ecf0f1; border-radius: 8px; text-align: center;">
+                        <h4 style="color: #2c3e50; margin-bottom: 15px;">Have feedback or want to contribute?</h4>
+                        <p style="color: #555; margin-bottom: 20px;">
+                            We value your input! Reach out to us at <strong>nagadheeran.reddy@gmail.com</strong>
+                        </p>
+                        <a href="index.html" class="btn btn-primary">Back to Home</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer style="background-color: #2c3e50; color: white; text-align: center; padding: 20px; font-size: 14px;">
+            <p>&copy; 2026 Study Resources. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

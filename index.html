@@ -10,24 +10,57 @@
         <link rel="stylesheet" href="assets/css/theme.css">
     </head>
 
-    <body>
-        <header style="background-color: #1a1a1a; padding: 25px 0; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);">
-            <div class="container">
-                <h1 style="color: white; margin: 0; font-size: 32px; font-weight: bold;">Study Resources</h1>
-                <p style="color: #bbb; margin: 8px 0 0 0; font-size: 14px;">9th Grade Curriculum</p>
+    <body class="has-main-header">
+        <header>
+            <div class="top-contact">
+                <div class="container">
+                    <div class="title">dheeran.net — Non-profit helping kids with practical school resources</div>
+                    <div>
+                        <a href="mailto:nagadheeran.reddy@gmail.com">Contact</a>
+                        <a href="https://dheeran.net" target="_blank" rel="noopener">Visit dheeran.net</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar container main-navbar">
+                <div class="navbar-brand"><a href="index.html">Study Resources</a></div>
+                <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+                <ul class="nav-links" id="mainNav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="learning/subject-docs/9th-grade/biology/9th_bio.html">Biology</a></li>
+                    <li><a href="learning/subject-docs/9th-grade/chemistry/9th_chem.html">Chemistry</a></li>
+                    <li><a href="learning/subject-docs/9th-grade/physics/9th_physics.html">Physics</a></li>
+                    <li><a href="learning/subject-docs/9th-grade/history/9th_history.html">History</a></li>
+                    <li><a href="learning/subject-docs/9th-grade/english/9th_english.html">English</a></li>
+                    <li><a href="learning/subject-docs/9th-grade/geography/9th_geography.html">Geography</a></li>
+                    <li><a href="contributors.html">Contributors</a></li>
+                </ul>
             </div>
         </header>
 
         <main>
-            <section style="padding: 60px 20px; background-color: #f9f9f9;">
+            <!-- Hero / Goal Section -->
+            <section class="hero">
+                <div class="hero-inner container">
+                    <h1 class="hero-title">Helping kids learn with curiosity and practical examples</h1>
+                    <p class="hero-desc">Study Resources (supported by <strong>dheeran.net</strong>) is a non-profit initiative that creates
+                        engaging, accessible study materials tied to real-world applications so students can better understand
+                        and enjoy their school subjects.</p>
+                    <div class="hero-ctas">
+                        <a href="learning/subject-docs/9th-grade/biology/9th_bio.html" class="btn btn-primary">Explore Subjects</a>
+                        <a href="contributors.html" class="btn btn-ghost">Meet Contributors</a>
+                        <a href="learning/subject-docs/9th-grade/chemistry/9th_chem.html" class="btn btn-warning">Try a Lesson</a>
+                    </div>
+                    <p class="hero-note">Volunteer hours available for contributors who submit reading materials.</p>
+                </div>
+            </section>
+            <section class="section section--light">
                 <div class="container">
-                    <h2 style="text-align: center; font-size: 36px; margin-bottom: 50px; color: #333;">Academic Disciplines</h2>
+                    <h2 class="text-center mb-3">Academic Disciplines</h2>
                     
                     <!-- STEM Section -->
-                    <div style="margin-bottom: 60px;">
-                        <h3 style="font-size: 28px; color: #2c3e50; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 3px solid #3498db;">
-                            STEM (Science, Technology, Engineering, Math)
-                        </h3>
+                    <div class="mb-3">
+                        <h3 class="section-title section-title--primary">STEM (Science, Technology, Engineering, Math)</h3>
                         <div class="service-cards">
                             <div class="card">
                                 <h3>Chemistry</h3>
@@ -47,16 +80,14 @@
                             <div class="card">
                                 <h3>Mathematics</h3>
                                 <p>Algebra, geometry, and mathematical concepts</p>
-                                <a href="#" class="btn btn-secondary" style="cursor: not-allowed; opacity: 0.6;">Coming Soon</a>
+                                <a href="#" class="btn btn-secondary btn-disabled">Coming Soon</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Liberal Arts Section -->
                     <div>
-                        <h3 style="font-size: 28px; color: #2c3e50; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 3px solid #e74c3c;">
-                            Liberal Arts
-                        </h3>
+                        <h3 class="section-title section-title--accent">Liberal Arts</h3>
                         <div class="service-cards">
                             <div class="card">
                                 <h3>History</h3>
@@ -78,10 +109,10 @@
                 </div>
             </section>
 
-            <section style="padding: 50px 20px; background-color: white;">
+            <section class="section section--white">
                 <div class="container">
-                    <h2 style="text-align: center; font-size: 28px; margin-bottom: 40px; color: #333;">About These Materials</h2>
-                    <div style="max-width: 800px; margin: 0 auto;">
+                    <h2 class="text-center mb-2">About These Materials</h2>
+                    <div class="narrow">
                         <div class="bodycontent-disclamer">
                             <h4>Educational Use Notice</h4>
                             <p>
@@ -99,13 +130,32 @@
                                 We have editors who review feedback, so corrections will typically be made promptly.
                             </p>
                         </div>
+                        <div class="bodycontent-disclamer">
+                            <h4>Contributors</h4>
+                            <p>
+                                Want to learn more about the people behind Study Resources? 
+                                <a href="contributors.html" class="link-primary">View our contributors page</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
 
-        <footer style="background-color: #2c3e50; color: white; text-align: center; padding: 20px; font-size: 14px;">
+        <footer class="site-footer">
             <p>&copy; 2026 Study Resources. All rights reserved.</p>
         </footer>
+        <script>
+            // Mobile nav toggle
+            document.addEventListener('DOMContentLoaded', function(){
+                var btn = document.querySelector('.nav-toggle');
+                var nav = document.getElementById('mainNav');
+                if(btn && nav){
+                    btn.addEventListener('click', function(){
+                        nav.classList.toggle('show');
+                    });
+                }
+            });
+        </script>
     </body>
 </html> 

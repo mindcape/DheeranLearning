@@ -18,6 +18,25 @@ body {
   line-height: 1.6;
 }
 
+/* Standardized typography */
+h1, h2, h3, h4 {
+  color: #2c3e50;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+p {
+  color: #555;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -44,6 +63,30 @@ input, textarea, select {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* Main content spacing consistent across pages */
+main, .main {
+  padding-bottom: 40px;
+}
+
+/* Subject page specific helpers */
+.subject-intro {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+.study-layout {
+  display: block;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+.study-content h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
 }
 
 .text-center {
@@ -80,3 +123,75 @@ img {
   height: auto;
   display: block;
 }
+
+/* Header and top bar */
+.top-contact {
+  background: #0f1720;
+  color: #dbeafe;
+  padding: 6px 0;
+  font-size: 14px;
+}
+.top-contact .container { display:flex; justify-content:space-between; align-items:center; }
+
+/* Navbar */
+.main-navbar { position: relative; padding: 14px 0; }
+
+/* Hero */
+.hero { padding: 60px 20px; background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%); text-align:center; }
+.hero .hero-inner { max-width:900px; margin:0 auto; }
+.hero-title { font-size: 42px; color:#2c3e50; margin-bottom:16px; }
+.hero-desc { color:#555; font-size:18px; line-height:1.6; margin-bottom:22px; }
+.hero-ctas { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+.hero-note { color:#777; font-size:14px; margin-top:16px; }
+
+/* Section spacing */
+.section { padding: 60px 20px; }
+.section--light { background-color:#f9f9f9; }
+.section--white { background-color: #ffffff; }
+
+/* Small utility */
+.muted { color:#777; }
+
+/* Top contact helpers */
+.top-contact .title { color:#dbeafe; font-weight:600; }
+
+/* Navbar helper */
+.main-navbar { position: relative; }
+
+/* Buttons: ghost and warning */
+.btn-ghost {
+  background: #ecf0f1;
+  color: #2c3e50;
+}
+.btn-warning {
+  background: #ffbe76;
+  color: #2c3e50;
+}
+.btn-disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Section titles */
+.section-title {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid transparent;
+}
+.section-title--primary { border-bottom-color: #3498db; }
+.section-title--accent { border-bottom-color: #e74c3c; }
+
+/* Narrow container helper */
+.narrow { max-width: 800px; margin: 0 auto; }
+
+/* Footer */
+.site-footer { background-color: #2c3e50; color: white; text-align: center; padding: 20px; font-size: 14px; }
+
+/* Body class to offset fixed headers */
+body.has-main-header main { margin-top: 100px; }
+
+.link-primary { color: #3498db; text-decoration: underline; }
+
+.top-contact .container a + a { margin-left: 12px; }
